@@ -2,6 +2,7 @@
 FROM nginx:alpine
 
 # Copy our app files into the default Nginx document root (/usr/share/nginx/html)
+COPY index.html /usr/share/nginx/html/
 COPY elements.html /usr/share/nginx/html/
 COPY generic.html /usr/share/nginx/html/
 COPY landing.html /usr/share/nginx/html/
@@ -11,4 +12,4 @@ COPY LICENSE.txt /usr/share/nginx/html/
 COPY README.txt /usr/share/nginx/html/
 
 # Expose port 80 for HTTP access (Nginx listens on port 80 by default)
-EXPOSE 81
+EXPOSE 80
